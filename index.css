@@ -1,0 +1,790 @@
+*{
+    padding:0;
+    margin: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+body{
+    background: #3a6e5e73;
+}
+/*  All common css  */
+
+.home_content,.about_content,.skill_content,.service_content
+,.teams_content,.contacts_content{
+    padding: 50px 15px;
+}
+.navContent,.subNavBar,.home_content,.about_content,.skill_content
+,.service_content,.teams_content,.contacts_content{
+    font-family: 'Open Sans','Poppins','Ubuntu',sans-serif;
+}
+.container{
+    padding: 0px 80px;
+}
+#contactMe,.navContent,.home_content,.skillMain,.serviceMain
+,.teamMain,.contactsMain{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+section{
+    padding: 60px 0;
+}
+.title{
+    position: relative;
+    text-align: center;
+    font-size: 40px;
+    font-weight: 500px;
+    margin-bottom: 60px;
+    padding-bottom: 20px; 
+    font-family: 'Ubuntu',sans-serif;
+}
+.title::before{
+    content: "";
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    width: 200px;
+    height: 3px;
+    transform: translateX(-50%);
+}
+
+
+/* Sub navigation bar  */
+
+.subNavBar{
+    width: 100%;
+    background-color: #3a6e5eeb;
+    padding: 10px 0px;
+    color: #fff;
+    font-weight: 500;
+    animation: movedown 1s linear 1;
+    animation-delay: 1s;
+    /* visibility: hidden; */
+    animation-fill-mode: forwards;
+}
+
+
+/* Navbar styling stat here  */
+
+.navBar{
+    z-index: 999;
+    position:relative;
+    width: 100%;
+    font-size: 20px;
+    padding: 30px 0px;
+    transition: all 0.3s ease;
+}
+.sticky{
+    position: fixed;
+    top: 0;
+    padding: 15px 0px;
+    background: #3a6e5eeb;
+    color: #fff;
+    transition: all 0.5s ease;
+
+}
+.navContent li{
+    animation: moveup 1s linear 1;
+    animation-delay: 3s;
+    /* visibility: hidden; */
+    animation-fill-mode: forwards;
+}
+.navLeft{
+    animation: moveleft 1s linear 1;
+    animation-delay: 2s;
+    /* visibility: hidden; */
+    animation-fill-mode: forwards;
+}
+.navLeft span{
+    color: crimson;
+    transition: all 0.3s ease;
+}
+.sticky .navLeft span{
+    color: #111;
+}
+.bar{
+    position: relative;
+    display: none;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+}
+.bar.active span{
+    position: absolute;
+}
+.bar span{
+    display: block;
+    width: 100%;
+    height: 5px;
+    background: #fff;
+    border-radius: 5px;
+    transition: all .4s linear;
+}
+.bar.active span:nth-child(1){
+    width: 0;
+}
+.bar.active span:nth-child(2){
+    transform: rotate(45deg);
+}
+.bar.active span:nth-child(3){
+    transform: rotate(-45deg);
+}
+.menu{
+    display: flex;
+    list-style: none;
+}
+.menu li{
+    margin: 0px 15px;
+}
+.menu li a{
+    font-size: 15px;
+    font-weight: 600;
+    color: #111;
+    transition: all 0.3s ease;
+}
+.sticky .menu li a {
+    color: #fff;
+    transition: all 0.4s ease;
+}
+.menu li a:hover{
+    color: #fff;
+    text-decoration: overline 3px;
+}
+
+
+/* Home section styling start  */
+
+.home_content{
+    background: #222;
+    border-radius: 5px;
+    /* visibility: hidden; */
+    animation: mood 2s linear 1;
+    animation-fill-mode: forwards;
+    animation-delay: 4s;
+    overflow: hidden;
+}
+.home_content:hover .homeLeft h3 span{
+    text-decoration: underline;
+}
+
+.home_content .homeLeft{
+    width: 60%;
+    color: #fff;
+}
+.home_content .homeLeft small{
+    font-size: 20px;
+    font-weight: 600;
+}
+.home_content .homeLeft h2{
+    font-size: 60px;
+    font-weight: 700;
+}
+.home_content .homeLeft h3{
+    font-size: 30px;
+    font-weight: 600;
+    margin-bottom: 30px;
+}
+.home_content .homeLeft h3 span{
+    color: crimson;
+}
+.home_content .homeLeft .homeButton a{
+    font-size: 20px;
+    font-weight: 500;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: 2px solid crimson;
+    color: crimson;
+    transition: all 0.5s ease;
+}
+.home_content .homeLeft .homeButton a:hover{
+    color: #fff;
+    background: crimson;
+}
+.home_content .homeRight{
+    width: 50%;
+    height: 100%;
+}
+.home_content .homeRight img{
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
+.homeRight img:hover{
+    transform: rotate(360deg);
+}
+
+
+/* About section styling start  */
+
+
+.about_content{
+    background: #222;
+    color: #fff;
+    border-radius: 5px;
+    box-shadow: #111
+}
+.aboutTitle::before{
+    background: #fff;
+}
+.aboutTitle::after{
+    content: "who i am";
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 17px;
+    color: #fff;
+    padding: 5px;
+    background: #222;
+}
+.aboutMain{
+    text-align: center;
+    text-align: justify;
+    padding: 0px 15px;
+}
+.aboutMain h2{
+    font-size: 30px;
+    transition: all 0.4s ease;
+    display: inline;
+}
+.aboutMain h2:hover{
+    color: crimson;
+    text-decoration: underline #fff;
+}
+.aboutMain p{
+    font-size: 17px;
+    padding: 30 0px;
+}
+.aboutMain span a{
+    color: #fff;
+    font-size: 25px;
+    border: 2px solid #fff;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-weight: 600;
+    transition: all 0.4s ease;
+}
+.aboutMain span a:hover{
+    color: #222;
+    background: #fff;
+}
+
+
+/* Skill section styling start  */
+
+.skill_content{
+    color: #fff;
+    background: #222;
+    border-radius: 5px;
+}
+.skillTitle::before{
+    background: #fff;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.skilltitle::after{
+    content: "what i know";
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 17px;
+    padding: 5px;
+    background: #222;
+    color: #fff;
+}
+.skillLeft{
+    width: 50%;
+    text-align: justify;
+    padding-right: 10px;
+}
+.skillLeft h2{
+    font-size: 30px;
+    font-weight: 600;
+    padding-bottom: 20px;
+    transition: all 0.4s ease;
+}
+.skillLeft h2:hover{
+    color: crimson;
+    text-decoration: underline #fff;
+}
+.skillLeft p{
+    font-size: 17px;
+    padding-bottom: 30px;
+}
+.skillLeft span a{
+    font-size: 20px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: 2px solid #fff;
+    color: #fff;
+    transition: all 0.4s ease;
+}
+.skillLeft span a:hover{
+    background: #fff;
+    color: #222;
+}
+.skillRight{
+    width: 50%;
+    padding-left: 10px;
+}
+.skillBars{
+    margin-bottom: 30px;
+}
+.skillBarsInfo{
+    display: flex;
+    margin-bottom: 5px;
+    align-items: center;
+    justify-content: space-between;
+}
+.skillBarsInfo span{
+    font-weight: 600;
+    font-size: 18px;
+}
+.skillLine{
+    height: 5px;
+    width: 100%;
+    background-color: lightgray;
+    position: relative;
+}
+.skillLine::before{
+    content: "";
+    position: absolute;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background: crimson;
+}
+.html::before{
+    width: 95%;
+}
+.css::before{
+    width: 95%;
+}
+.js::before{
+    width: 60%;
+}
+.php::before{
+    width: 20%;
+}
+
+
+
+/* service section styling start  */
+
+
+.service_content{
+    background: #222;
+    color: #fff;
+    border-radius: 5px;
+}
+.serviceTitle::before{
+    background: #fff;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.serviceTitle::after{
+    content: "What i provide";
+    font-size: 15px;
+    bottom: -12px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #222;
+    padding: 5px;
+    color: #fff;
+}
+.serviceCard{
+    width: 100%;
+    text-align: center;
+    margin: 10px 10px;
+    padding: 10px;
+    border: 2px solid #fff;
+    border-radius: 5px;
+    transition: all 0.4s ease;
+    cursor: pointer;
+}
+.serviceCard1:hover,.serviceCard2:hover,.serviceCard3:hover,.serviceCard4:hover{
+    transform: scale(1.05);
+    background: #fff;
+    color: #222;
+}
+.serviceCard1:hover h2,.serviceCard2:hover h2,.serviceCard3:hover h2,.serviceCard4:hover h2{
+    text-decoration: overline 3px #222;
+}
+.serviceCard i{
+    font-size: 30px;
+}
+.serviceCard h2{
+    padding: 10px 0;
+    font-size: 22px;
+    font-weight: 600;
+}
+.serviceCard p{
+    text-align: justify;
+    padding: 20px 0;
+    font-size: 17px;
+}
+
+
+
+/* teams section styling start  */
+
+
+.teams_content{
+    background: #222;
+    color: #fff;
+    overflow: hidden;
+}
+.teamsTitle::before{
+    background: #fff;
+}
+.teamsTitle::after{
+    content: "who with me";
+    position: absolute;
+    font-size: 15px;
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #222;
+    color: #fff;
+    padding: 5px;
+}
+.teamMain{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.teamCard{
+    width: 23%;
+    margin: 10px;
+    padding: 10px;
+    background: #322;
+    border-radius: 5px;
+    text-align: center;
+    transition:all 0.4s ease;
+}
+.teamCard img{
+    object-fit: cover;
+    margin: 25px;
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    border: 3px solid #322;
+}
+.teamCard:hover{
+    color: #222;
+    background: #fff;
+    transform: scale(1.05);
+    cursor: pointer;  
+}
+.teamCard:hover img{
+    transform: rotatey(180deg);
+}
+.teamCard:hover img{
+    border-color: #111;
+}
+
+
+
+/* contacts section styling start  */
+
+
+
+.contacts_content{
+    background: #222;
+    color: #fff;
+    border-radius: 5px;
+}
+.contactsTitle::before{
+    background: #fff;
+}
+.contactsTitle::after{
+    content: "get in touch";
+    position: absolute;
+    font-size: 17px;
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #222;
+    padding: 5px;
+}
+.contactLeft{
+    width: 50%;
+    padding-left: 20px;
+}
+.contactLeft h2{
+    font-size: 30px;
+    padding: 20px 0;
+}
+.contactLeft p{
+    font-size: 17px;
+    padding-bottom: 20px;
+}
+.contactInfo{
+    display: flex;
+    align-items: center;
+    padding: 10px 0;
+}
+.contactInfo i{
+    font-size: 20px;
+    padding-right: 30px;
+}
+.contactInfoHead{
+    font-size: 17px;
+    font-weight: 600;
+    padding-bottom: 3px;
+}
+.contactInfoSub{
+    font-size: 14px;
+    font-weight: 500;
+}
+.contactRight{
+    width: 50%;
+}
+.formHead{
+    font-size: 20px;
+    padding: 10px 0;
+}
+.fields{
+    display: flex;
+}
+.field{
+    height: 45px;
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+form .textarea{
+    height: 80px;
+    width: 100%;
+}
+
+form .name{
+    margin-right: 10px;
+}
+
+form .email{
+    margin-left: 10px;
+}
+
+form .field input,
+form .textarea textarea{
+    height: 100%;
+    width: 100%;
+    border: 1px solid lightgrey;
+    border-radius: 6px;
+    outline: none;
+    padding: 0 15px;
+    font-size: 17px;
+    font-family: 'Poppins', sans-serif;
+}
+form .textarea textarea{
+    padding-top: 10px;
+    resize: none;
+}
+form .button{
+    height: 47px;
+    width: 170px;
+}
+
+form .button button{
+    width: 100%;
+    height: 100%;
+    margin-top: 15px;
+    border: 2px solid #fff;
+    background: none;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 500;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+form .button button:hover{
+    color: #222;
+    background: #fff;
+}
+.footer{
+    background: #222;
+    padding: 40px 0;
+    text-align: center;
+    color: #fff;
+    font-size: 20px;
+}
+.footer a{
+    color: #fff;
+}
+
+
+
+
+
+/* @keyframes movedown{
+    0%{
+        transform: translateY(-50px);
+        visibility: visible;
+    }
+    100%{
+        transform: translateY(0);
+        visibility: visible;
+    }
+}
+
+@keyframes moveup{
+    0%{
+        transform: translateY(50px);
+        visibility: visible;
+    }
+    100%{
+        transform: translateY(0);
+        visibility: visible;
+    }
+}
+
+@keyframes zoomin{
+    0%{
+        transform: scale(.5);
+        visibility: visible;
+    }
+    100%{
+        transform: scale(1);
+        visibility: visible;
+    }
+}
+
+@keyframes moveleft{
+    0%{
+        transform: translateX(-50px);
+        visibility: visible;
+    }
+    100%{
+        transform: translateX(0);
+        visibility: visible;
+    }
+}
+
+@keyframes mood{
+    0%{
+        transform: scale(0.5);
+        visibility: visible;
+    }
+    100%{
+        transform: scale(1);
+        visibility: visible;
+    }
+} */
+
+@media (max-width: 1190px) {
+    .teamCard{
+        width: 45%;
+    }
+}
+@media (max-width: 900px) {
+    .container{
+        padding: 0 50px;
+    }
+    .skillMain{
+        flex-direction: column;
+    }
+    .skillLeft{
+        width: 100%;
+    }
+    .skillRight{
+        margin-top: 40px;
+        width: 100%;
+    }
+    .serviceMain{
+        flex-wrap: wrap;
+    }
+    .teamMain{
+        flex-wrap: wrap;
+    }
+    .teamCard{
+        width: 100%;
+    }
+    .contactsMain{
+        flex-direction: column;
+    }
+    .contactLeft{
+        width: 100%;
+    }
+    .contactRight{
+        width: 100%;
+    }
+}
+
+@media (max-width: 750px) {
+    .container{
+        padding: 0 20px;
+    }
+}
+
+@media (max-width: 650px) {
+    .container{
+        padding: 0 10px;
+    }
+    .navBar.sticky .menu{
+        top: 70px;
+    }
+    .menu{
+        position: absolute;
+        width: 200px;
+        height: 300px;
+        top: 100px;
+        left: -200px;
+        display: flex;
+        flex-direction: column;
+        align-items:center;
+        justify-content: space-evenly;
+        background: #222;
+        transition: all .4s linear;
+        box-shadow: inset 5px 5px 2px #3a6e5eeb,inset -5px -5px 2px #3a6e5eeb;
+        border-radius: 5px;
+    }
+    .menu li a{
+        display: block;
+        color: #fff;
+        width: 100%;
+        padding: 6px 0;
+        margin: 0;
+        text-decoration: none;
+    }
+    .menu li{
+        width: 100%;
+        display: flex;
+        padding: 0 20px;
+        transition: all .4s linear;
+    }
+    .menu li:hover{
+        background: #fff;
+    }
+    .menu li:hover a{
+        color: #222;
+    }
+    .menu li a:hover{
+        text-decoration: none;
+    }
+    .navBar.active .menu{
+        left: 0;
+    }
+    .bar{
+        display: flex;
+    }
+    .homeRight{
+        width: 0 !important;
+        height: 0 !important;
+    }
+    .homeLeft{
+        width: 100% !important;
+    }
+}
+@media (max-width: 350px) {
+    .container{
+        padding: 0;
+    }
+}
